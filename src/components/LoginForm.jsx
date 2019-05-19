@@ -15,6 +15,7 @@ class LoginForm extends PureComponent {
             className="form-control"
             id="username"
             placeholder="Username"
+            required
           />
         </div>
 
@@ -27,6 +28,7 @@ class LoginForm extends PureComponent {
             className="form-control"
             id="password"
             placeholder="Password"
+            required
           />
         </div>
 
