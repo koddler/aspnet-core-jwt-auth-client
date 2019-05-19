@@ -11,6 +11,14 @@ class Login extends PureComponent {
           </div>
         </div>
 
+        <Link className="btn btn-light" to="/register">
+          Registration
+        </Link>
+        <Link className="btn btn-light" to="/users">
+          Users
+        </Link>
+        <hr />
+
         <form>
           <div className="form-group">
             <label for="username">Username</label>
@@ -32,13 +40,10 @@ class Login extends PureComponent {
             />
           </div>
 
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-secondary">
             Submit
           </button>
         </form>
-        <Link to="/register">Registration</Link>
-        <br />
-        <Link to="/users">Users</Link>
       </div>
     );
   }
