@@ -23,3 +23,19 @@ export const login = credentials => dispatch => {
       });
     });
 };
+
+export const register = details => dispatch => {
+  fetch(REGISTRATION_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(details)
+  })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      return dispatch({
+        type: USER_LOGIN,
+        payload: data
+      });
+    });
+};

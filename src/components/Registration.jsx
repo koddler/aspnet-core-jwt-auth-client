@@ -1,12 +1,14 @@
 import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import RegistrationForm from './RegistrationForm';
+import { register } from '../redux/actions/accountsAction';
 
 class Registration extends PureComponent {
   submit = values => {
-    // TODO: call api
     console.log(values);
+    this.props.register(values);
   };
 
   render() {
@@ -32,4 +34,7 @@ class Registration extends PureComponent {
   }
 }
 
-export default Registration;
+export default connect(
+  null,
+  { register }
+)(Registration);
