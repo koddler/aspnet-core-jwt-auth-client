@@ -1,12 +1,12 @@
 import React from 'react';
-import './App.css';
 
-import Users from '../components/Users';
+import './App.css';
+import Router from './Router';
 
 function App() {
   return (
     <div>
-      <Users />
+      <Router />
     </div>
   );
 }
