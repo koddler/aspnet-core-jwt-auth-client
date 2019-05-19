@@ -1,12 +1,14 @@
 import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import LoginForm from './LoginForm';
+import { login } from '../redux/actions/accountsAction';
 
 class Login extends PureComponent {
   submit = values => {
-    // TODO: call api
     console.log(values);
+    this.props.login(values);
   };
 
   render() {
@@ -32,4 +34,7 @@ class Login extends PureComponent {
   }
 }
 
-export default Login;
+export default connect(
+  null,
+  { login }
+)(Login);
