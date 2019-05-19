@@ -5,10 +5,22 @@ class Users extends PureComponent {
   render() {
     return (
       <div>
-        <div>Users Component</div>
-        <Link to="/login">Login</Link><br/>
-        <Link to="/register">Registration</Link><br/>
-        <Link to="/users">Users</Link>
+        <div className="jumbotron">
+          <div className="container">
+            <h1 className="display-4">Users</h1>
+          </div>
+        </div>
+
+        <Link className="btn btn-light" to="/login">
+          Login
+        </Link>
+        <Link className="btn btn-light" to="/register">
+          Registration
+        </Link>
+        <Link className="btn btn-light" to="/users">
+          Users
+        </Link>
+        <hr />
       </div>
     );
   }
