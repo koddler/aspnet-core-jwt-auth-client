@@ -11,11 +11,11 @@ export const get = (url, dispatch, type) => {
     .catch(err => console.error(err));
 };
 
-
 // HTTP POST
 export const post = (url, dispatch, type, postData) => {
   fetch(url, {
     method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(postData)
   })
     .then(response => response.json())
