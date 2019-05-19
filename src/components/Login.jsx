@@ -21,7 +21,7 @@ class Login extends PureComponent {
 
         <form>
           <div className="form-group">
-            <label for="username">Username</label>
+            <label htmlFor="username">Username</label>
             <input
               type="text"
               className="form-control"
@@ -31,7 +31,7 @@ class Login extends PureComponent {
           </div>
 
           <div className="form-group">
-            <label for="password">Password</label>
+            <label htmlFor="password">Password</label>
             <input
               type="password"
               className="form-control"
