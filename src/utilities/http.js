@@ -1,6 +1,11 @@
 // HTTP GET
 export const get = (url, dispatch, type) => {
-  fetch(url)
+  let token = localStorage.getItem('token');
+  let headers = new Headers({
+    'Content-Type': 'application/json',
+    Authorization: `Bearer ${token}`
+  });
+  fetch(url, { headers: headers })
     .then(response => response.json())
     .then(data => {
       return dispatch({
