@@ -5,8 +5,17 @@ import { connect } from 'react-redux';
 import { fetchUsers } from '../redux/actions/usersAction';
 
 class Users extends PureComponent {
+  constructor(props) {
+    super(props);
+    this.handleLogout = this.handleLogout.bind(this);
+  }
+
   componentDidMount() {
     this.props.fetchUsers();
+  }
+
+  handleLogout() {
+    localStorage.removeItem('token');
   }
 
   render() {
@@ -20,14 +29,8 @@ class Users extends PureComponent {
           </div>
         </div>
 
-        <Link className="btn btn-light" to="/login">
-          Login
-        </Link>
-        <Link className="btn btn-light" to="/register">
-          Registration
-        </Link>
-        <Link className="btn btn-light" to="/users">
-          Users
+        <Link className="btn btn-light" to="/login" onClick={this.handleLogout}>
+          Logout
         </Link>
         <hr />
 
